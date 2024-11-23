@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Para Extubação Segura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="image.png" alt="Logo Odilon Behrens" class="logo">
+            <h1>Checklist Para Extubação Segura</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form id="checklistForm">
+            <!-- Itens 1 a 8 com caixas de seleção -->
+            <div class="checklist-item" id="item1">
+                <span>1. Melhora da causa que levou à intubação</span>
+                <input type="checkbox" onchange="validateItem(1)">
+            </div>
+            <div class="checklist-item" id="item2">
+                <span>2. Ausência de balanço hídrico muito positivo</span>
+                <input type="checkbox" onchange="validateItem(2)">
+            </div>
+            <div class="checklist-item" id="item3">
+                <span>3. Presença de drive respiratório</span>
+                <input type="checkbox" onchange="validateItem(3)">
+            </div>
+            <div class="checklist-item" id="item4">
+                <span>4. Relação P/F > 150 com saturação > 90% em FiO² < 40% e PEEP < 5</span>
+                <input type="checkbox" onchange="validateItem(4)">
+            </div>
+            <div class="checklist-item" id="item5">
+                <span>5. pH arterial > 7,25 ou próximo do basal em distúrbios crônicos</span>
+                <input type="checkbox" onchange="validateItem(5)">
+            </div>
+            <div class="checklist-item" id="item6">
+                <span>6. Estabilidade hemodinâmica</span>
+                <input type="checkbox" onchange="validateItem(6)">
+                <div class="observacao">
+                    Noradrenalina > 0,1 mcg/kg/min está relacionada a uma maior taxa de reintubação.
+                </div>
+            </div>
+            <div class="checklist-item" id="item7">
+                <span>7. Escala de coma de Glasgow ≥ 8</span>
+                <input type="checkbox" onchange="validateItem(7)">
+            </div>
+            <div class="checklist-item" id="item8">
+                <span>8. RASS entre -2 e +1</span>
+                <input type="checkbox" onchange="validateItem(8)">
+                <div class="observacao">
+                    ECG entre 8 e 15 e RASS entre +1 e -2 não parecem alterar risco de falha de extubação.
+                </div>
+            </div>
+            <!-- Item 9 com subtarefas -->
+            <div class="checklist-item" id="item9">
+                <span>9. Capacidade de obedecer comandos</span>
+                <div class="sub-item"><input type="checkbox" onchange="validateSubItems(9)"> a. Abertura ocular</div>
+                <div class="sub-item"><input type="checkbox" onchange="validateSubItems(9)"> b. Acompanha com olhar</div>
+                <div class="sub-item"><input type="checkbox" onchange="validateSubItems(9)"> c. Aperta mãos</div>
+                <div class="sub-item"><input type="checkbox" onchange="validateSubItems(9)"> d. Mostra a língua</div>
+            </div>
+            <!-- Itens 10 a 14 -->
+            <div class="checklist-item" id="item10">
+                <span>10. Pico de fluxo de tosse > 60L/min</span>
+                <input type="checkbox" onchange="validateItem(10)">
+            </div>
+            <div class="checklist-item" id="item11">
+                <span>11. Volume de secreção < 2,5 mL/h</span>
+                <input type="checkbox" onchange="validateItem(11)">
+                <div class="observacao">
+                    Pico de fluxo de tosse menor que 60 L/min e volume de secreção maior que 2,5 mL/h estão associados a maior risco de falha.
+                </div>
+            </div>
+            <div class="checklist-item" id="item12">
+                <span>12. Índice de Tobin (se dúvida em critérios de desmame)</span>
+                <input type="number" step="0.01" placeholder="Insira o valor">
+                <div class="observacao">
+                    Não deve ser usado rotineiramente, pois aumenta o tempo de ventilação mecânica.
+                </div>
+            </div>
+            <div class="checklist-item" id="item13">
+                <span>13. Teste de respiração espontânea positivo</span>
+                <input type="checkbox" onchange="validateItem(13)">
+            </div>
+            <div class="checklist-item" id="item14">
+                <span>14. Teste de cuff leak positivo em pacientes de alto risco</span>
+                <input type="checkbox" onchange="validateItem(14)">
+                <div class="observacao">
+                    Não utilizar em pacientes sem fatores de risco para estridor.
+                </div>
+            </div>
+            <!-- Itens 15 e 16 com opções Sim/Não -->
+            <div class="checklist-item" id="item15">
+                <span>15. Indicação de VNI facilitadora</span>
+                <label><input type="radio" name="item15" value="Sim"> Sim</label>
+                <label><input type="radio" name="item15" value="Não"> Não</label>
+                <div class="observacao">
+                    Para pacientes prontos para extubação, mas com critérios adicionais.
+                </div>
+            </div>
+            <div class="checklist-item" id="item16">
+                <span>16. Indicação de tratamento preventivo com VNI</span>
+                <label><input type="radio" name="item16" value="Sim"> Sim</label>
+                <label><input type="radio" name="item16" value="Não"> Não</label>
+                <div class="observacao">
+                    Recomendado para pacientes com alto risco de reintubação.
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        O Guilherme Reis gosta de rebolar lentinho pros crias
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
